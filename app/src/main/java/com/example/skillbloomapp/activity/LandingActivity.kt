@@ -1,13 +1,11 @@
 package com.example.skillbloomapp.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.example.skillbloomapp.databinding.ActivityLandingBinding
 
-class LandingActivity: AppCompatActivity() {
+class LandingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLandingBinding
 
@@ -16,19 +14,16 @@ class LandingActivity: AppCompatActivity() {
 
         binding = ActivityLandingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Set the onClickListener for the onToNext view
+        binding.onToNext.setOnClickListener {
+            navigateToSplashActivity()
+        }
     }
 
-    private fun showFragment(fragment: Fragment) {
-        // Fragment Manager
-        val fragmentManager: FragmentManager = supportFragmentManager
-
-        // Fragment transaction
-        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
-
-        // Replace fragment
-        fragmentTransaction.replace(binding.lytFragment.id, fragment)
-
-        // Commit Transaction
-        fragmentTransaction.commit()
+    private fun navigateToSplashActivity() {
+        // Start SplashActivity
+        val intent = Intent(this, SplashActivity::class.java)
+        startActivity(intent)
     }
 }

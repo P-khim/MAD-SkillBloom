@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/mnuHome" android:title="@string/home" android:icon="@drawable/homeicon"/>
+    <item android:id="@+id/mnuCommunity" android:title="@string/community" android:icon="@drawable/communityicon"/>
+    <item android:id="@+id/mnuPost" android:title="@string/Post" android:icon="@drawable/posticon"/>
+    <item android:id="@+id/mnuSave" android:title="@string/Save" android:icon="@drawable/saveicon"/>
+    <item android:id="@+id/mnuProfile" android:title="@string/Profile" android:icon="@drawable/profileicon"/>
+
+</menu>

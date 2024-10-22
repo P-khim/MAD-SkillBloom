@@ -36,6 +36,8 @@
 
         <!-- Declare SecondActivity -->
         <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.SplashActivity" />
+        <activity android:name=".activity.HomeActivity" />
     </application>
 
 </manifest>

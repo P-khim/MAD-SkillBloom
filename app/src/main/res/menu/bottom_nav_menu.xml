@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText">
+    <item
+        android:id="@+id/menu_home"
+        android:title="@string/home"
+        android:icon="@drawable/homeicon"
+        />
+    <item
+        android:id="@+id/menu_discover"
+        android:title="@string/community"
+        android:icon="@drawable/communityicon"
+        />
+    <item
+        android:id="@+id/menu_post"
+        android:title="@string/Post"
+        android:icon="@drawable/posticon"
+        />
+    <item
+        android:id="@+id/menu_bookmark"
+        android:title="@string/Save"
+        android:icon="@drawable/saveicon"
+        />
+    <item
+        android:id="@+id/menu_profile"
+        android:title="@string/Profile"
+        android:icon="@drawable/profileicon"
+        />
+</menu>
