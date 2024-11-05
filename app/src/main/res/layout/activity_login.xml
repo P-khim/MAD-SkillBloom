@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="@string/welcome_login"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewLoremIpsum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/dummy_text"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewLoremIpsum"
+        android:layout_marginTop="32dp"
+        android:autofillHints="Email"
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEmail"
+        android:layout_marginTop="16dp"
+        android:autofillHints="password"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageViewPasswordVisibility"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignEnd="@id/editTextPassword"-->
+<!--        android:layout_alignBottom="@id/editTextPassword"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:contentDescription="@string/imgicon"-->
+<!--        android:src="@drawable/ic_password_visibility_foreground" />-->
+
+    <LinearLayout
+        android:id="@+id/rmbnfg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPassword">
+
+        <CheckBox
+            android:id="@+id/checkBoxRememberMe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="@string/remember" />
+
+        <TextView
+            android:id="@+id/textViewForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/forgot_password" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rmbnfg"
+        android:layout_marginTop="24dp"
+        android:text="@string/login"
+        android:textColor="@android:color/white" />
+
+    <LinearLayout
+        android:id="@+id/switch_to_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonLogin"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+    <TextView
+        android:id="@+id/textViewSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/switch_to_signup" />
+
+    <TextView
+        android:id="@+id/textViewSignUpLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signup"
+        android:layout_marginStart="4dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/buttonFillLater"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switch_to_signup"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="@string/fill_later"/>
+</RelativeLayout>

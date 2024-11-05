@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.skillbloomapp.R
 import com.example.skillbloomapp.adapter.PlaceAdapter
 import com.example.skillbloomapp.api.State
+
 import com.example.skillbloomapp.viewmodel.PlaceViewModel
 
 
@@ -31,7 +32,9 @@ class MainActivity : AppCompatActivity() {
         val adapter = PlaceAdapter()
         recyclerView.adapter = adapter
 
+
         viewModel.places.observe(this as LifecycleOwner) { state ->
+
             when (state.state) {
                 State.LOADING -> {
                     progressBar.visibility = View.VISIBLE
@@ -52,5 +55,5 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-    }
+
 }

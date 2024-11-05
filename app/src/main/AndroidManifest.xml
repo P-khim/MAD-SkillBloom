@@ -12,6 +12,8 @@
         android:name="android.software.leanback"
         android:required="true" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -21,6 +23,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SkillBloomApp"
+
         tools:targetApi="31">
 
         <activity
@@ -38,6 +41,7 @@
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.SplashActivity" />
         <activity android:name=".activity.HomeActivity" />
+
     </application>
 
 </manifest>
