@@ -1,22 +1,37 @@
 <resources>
-    <string name="app_name">SkillBloomApp</string>
+
+    <string name="app_name">SkillBloom</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="imgicon">Image or Icon</string>
-    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</string>
-    <string name="welcome_login">Welcome Back</string>
-    <string name="email_hint">Email</string>
-    <string name="password_hint">Password</string>
-    <string name="login">Login</string>
-    <string name="signup">Sign Up</string>
-    <string name="switch_to_signup">Don\'t have an account?</string>
-    <string name="switch_to_login">Already have an account?</string>
-    <string name="remember">Remember me</string>
-    <string name="forgot_password">Forgot password?</string>
-    <string name="fill_later">Fill up later</string>
+    <string name="title_activity_main">Leanback MainActivity</string>
+    <string name="browse_title">Videos by Your Company</string>
+    <string name="related_movies">Related Videos</string>
+    <string name="grid_view">Grid View</string>
+    <string name="error_fragment">Error Fragment</string>
+    <string name="personal_settings">Personal Settings</string>
+    <string name="watch_trailer_1">Watch trailer</string>
+    <string name="watch_trailer_2">FREE</string>
+    <string name="rent_1">Rent By Day</string>
+    <string name="rent_2">From $1.99</string>
+    <string name="buy_1">Buy and Own</string>
+    <string name="buy_2">AT $9.99</string>
+    <string name="movie">Movie</string>
+
+    <!-- Error messages -->
+    <string name="error_fragment_message">An error occurred</string>
+    <string name="dismiss_error">Dismiss</string>
+
+    <!-- Splash txt -->
+    <string name="splash_motto">Unlock Your</string>
+    <string name="potential">Skill Potential</string>
+    <string name="here">Here!</string>
+    <string name="quote">Explore all the most exciting job roles based on your interest and study major.</string>
+
+    <!-- Bottom Bar txt -->
     <string name="home">Home</string>
-    <string name="discover">Discover</string>
-    <string name="post">Post</string>
-    <string name="bookmark">BookMark</string>
-    <string name="profile">Profile</string>
+    <string name="community">Community</string>
+    <string name="Post">Post</string>
+    <string name="Save">Save</string>
+    <string name="Profile">Profile</string>
+
 </resources>

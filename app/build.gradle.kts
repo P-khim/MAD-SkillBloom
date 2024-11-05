@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
@@ -30,10 +31,13 @@ android {
             )
         }
     }
+
+    // Ensure Java 1.8 compatibility
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
 
     kotlinOptions {
         jvmTarget = "1.8"
@@ -41,15 +45,14 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
+    implementation("androidx.leanback:leanback:1.0.0")
+    implementation("com.github.bumptech.glide:glide:4.11.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation(libs.lifecycle.runtime.ktx)
-    implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.recyclerview)
+
 
 
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
@@ -63,3 +66,4 @@ dependencies {
     implementation ("com.google.android.material:material:1.9.0")
 
 }
+

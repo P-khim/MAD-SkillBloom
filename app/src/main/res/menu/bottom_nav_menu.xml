@@ -5,21 +5,28 @@
     <item
         android:id="@+id/menu_home"
         android:title="@string/home"
+
+        android:icon="@drawable/homeicon"
         />
     <item
         android:id="@+id/menu_discover"
-        android:title="@string/discover"
+        android:title="@string/community"
+        android:icon="@drawable/communityicon"
         />
     <item
         android:id="@+id/menu_post"
-        android:title="@string/post"
+        android:title="@string/Post"
+        android:icon="@drawable/posticon"
         />
     <item
         android:id="@+id/menu_bookmark"
-        android:title="@string/bookmark" />
+        android:title="@string/Save"
+        android:icon="@drawable/saveicon"
+        />
     <item
         android:id="@+id/menu_profile"
-        android:title="@string/profile" />
+        android:title="@string/Profile"
+        android:icon="@drawable/profileicon"
+        />
 </menu>
 
-    <!--        android:icon="@drawable/ic_post"-->
