@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+
     id("org.jetbrains.kotlin.android")
 }
 
@@ -37,7 +38,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    // Ensure Kotlin targets JVM 1.8
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -53,6 +54,7 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
 
+
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
@@ -62,4 +64,6 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.8.2")
     implementation ("com.squareup.picasso:picasso:2.71828")
     implementation ("com.google.android.material:material:1.9.0")
+
 }
+
