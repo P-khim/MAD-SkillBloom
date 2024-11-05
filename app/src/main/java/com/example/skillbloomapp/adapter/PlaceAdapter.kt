@@ -29,7 +29,7 @@ class PlaceAdapter : ListAdapter<Place, PlaceAdapter.PlaceViewHolder>(PlaceDiffC
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlaceViewHolder {
         val itemView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.place_item, parent, false) // Inflate place_item.xml
+            .inflate(R.layout.place_item, parent, false)
         return PlaceViewHolder(itemView)
     }
 
@@ -39,7 +39,7 @@ class PlaceAdapter : ListAdapter<Place, PlaceAdapter.PlaceViewHolder>(PlaceDiffC
     }
 
     override fun getItemCount(): Int {
-        return currentList.size  // Return the actual size of the list
+        return currentList.size
     }
 }
 

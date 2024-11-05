@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.skillbloomapp.R
 import com.example.skillbloomapp.adapter.PlaceAdapter
 import com.example.skillbloomapp.api.State
+import com.example.skillbloomapp.databinding.ActivityLoginBinding
 import com.example.skillbloomapp.viewmodel.PlaceViewModel
 
 
@@ -52,5 +53,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+
     }
+
 }
