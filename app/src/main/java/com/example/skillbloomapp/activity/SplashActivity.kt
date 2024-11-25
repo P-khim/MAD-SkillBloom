@@ -24,7 +24,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun navigateToHomeActivity() {
         // Start HomeActivity
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
     }
 }

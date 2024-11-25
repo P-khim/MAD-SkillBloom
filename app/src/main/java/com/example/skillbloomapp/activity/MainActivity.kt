@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
 
-        viewModel.places.observe(this as LifecycleOwner) { state ->
+        viewModel.placesState.observe(this as LifecycleOwner) { state ->
 
             when (state.state) {
                 State.LOADING -> {
@@ -41,12 +41,14 @@ class MainActivity : AppCompatActivity() {
                     recyclerView.visibility = View.GONE
                     errorTextView.visibility = View.GONE
                 }
+
                 State.SUCCESS -> {
                     progressBar.visibility = View.GONE
                     recyclerView.visibility = View.VISIBLE
                     errorTextView.visibility = View.GONE
                     state.data?.let { adapter.submitList(it) }
                 }
+
                 State.ERROR -> {
                     progressBar.visibility = View.GONE
                     recyclerView.visibility = View.GONE
@@ -55,5 +57,5 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
+    }
 }

@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    @GET("iteapp-api/places.json")
+    @GET("images")
     suspend fun getPlaces(): List<Place>
 }

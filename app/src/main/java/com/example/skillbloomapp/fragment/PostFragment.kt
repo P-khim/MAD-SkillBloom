@@ -1,24 +1,27 @@
 package com.example.skillbloomapp.fragment
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.skillbloomapp.databinding.FragmentPostBinding
-import org.jetbrains.annotations.Nullable
 
-class PostFragment: AppCompatActivity() {
-    private lateinit var binding: FragmentPostBinding
+class PostFragment : Fragment() {
+    private var _binding: FragmentPostBinding? = null
+    private val binding get() = _binding!!
 
-    @Nullable
-    fun onCreateView(
+    override fun onCreateView(
         inflater: LayoutInflater,
-        @Nullable container: ViewGroup?,
-        @Nullable savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentPostBinding.inflate(inflater, container, false)
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentPostBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

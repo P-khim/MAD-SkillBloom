@@ -53,17 +53,16 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
-
-
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation ("androidx.fragment:fragment-ktx:1.6.1")
     implementation ("androidx.core:core-ktx:1.0.2")
-    implementation ("androidx.fragment:fragment-ktx:1.0.0")
     implementation ("androidx.lifecycle:lifecycle-extensions:2.0.0")
     implementation("androidx.activity:activity-ktx:1.8.2")
     implementation ("com.squareup.picasso:picasso:2.71828")
     implementation ("com.google.android.material:material:1.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.9.0")
 
 }
 

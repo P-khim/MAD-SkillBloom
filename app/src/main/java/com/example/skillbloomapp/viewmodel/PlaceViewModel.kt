@@ -1,30 +1,39 @@
 package com.example.skillbloomapp.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.skillbloomapp.api.ApiManager
 import com.example.skillbloomapp.api.ApiState
+import com.example.skillbloomapp.api.State
 import com.example.skillbloomapp.model.Place
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class PlaceViewModel : ViewModel() {
-    private val _places = MutableLiveData<ApiState<List<Place>>>()
-    val places: LiveData<ApiState<List<Place>>> = _places
 
-    init {
-        fetchPlaces()
-    }
+    private val _placesState = MutableLiveData<ApiState<List<Place>>>()
+    val placesState: LiveData<ApiState<List<Place>>> get() = _placesState
 
-    private fun fetchPlaces() {
+    fun fetchPlaces() {
+        val apiService = ApiManager.apiService
+
+        // Set loading state
+        _placesState.postValue(ApiState(State.LOADING, null))
         viewModelScope.launch {
-            _places.value = ApiState.loading()
             try {
-                val response = ApiManager.apiService.getPlaces()
-                _places.value = ApiState.success(response)
-            } catch (e: Exception) {
-                _places.value = ApiState.error(e.message ?: "Failed to fetch data")
+                // Simulate delay (optional, remove in production)
+                delay(3000)
+
+                // Fetch places directly as a list
+                val places = apiService.getPlaces()
+                _placesState.postValue(ApiState(State.SUCCESS, places))
+            } catch (ex: Exception) {
+                // Handle exceptions
+                Log.e("PlaceViewModel", "[Fetch Places] Error: $ex")
+                _placesState.postValue(ApiState(State.ERROR, null))
             }
         }
     }

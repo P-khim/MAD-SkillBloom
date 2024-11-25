@@ -3,7 +3,7 @@ package com.example.skillbloomapp.api
 enum class State {
     LOADING,
     SUCCESS,
-    ERROR
+    ERROR,
 }
 
 data class ApiState<out T>(val state: State, val data: T? = null, val message: String? = null) {
