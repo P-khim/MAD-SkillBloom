@@ -1,4 +1,8 @@
 package com.example.skillbloomapp.activity
 
-class ProfileActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class ProfileActivity : AppCompatActivity(){
+
+
 }
