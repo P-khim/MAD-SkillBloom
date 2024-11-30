@@ -25,7 +25,7 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.fetchProfile(5)
+        viewModel.fetchProfile(10)
 
         viewModel.profileData.observe(viewLifecycleOwner) {profile ->
             binding.txtName.text = profile.name

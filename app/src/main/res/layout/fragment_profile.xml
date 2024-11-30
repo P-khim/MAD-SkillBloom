@@ -5,88 +5,148 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/lytAccount"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:visibility="visible">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="350dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-122dp"
+            android:contentDescription="@string/imgicon"
+            android:src="@drawable/gradiant_background" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/profileCard"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cardCornerRadius="90dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="200dp"
+            app:strokeColor="@android:color/holo_blue_bright"
+            app:strokeWidth="1dp">
 
             <ImageView
-                android:id="@+id/imgCover"
+                android:id="@+id/imgProfile"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="90dp"
-                android:scaleType="centerCrop"
+                android:contentDescription="@string/imgicon"
                 android:src="@drawable/default_image" />
+        </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="180dp"
-                android:layout_height="180dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                app:cardCornerRadius="90dp"
-                app:strokeColor="@android:color/holo_blue_bright"
-                app:strokeWidth="5dp">
 
-                <ImageView
-                    android:id="@+id/imgProfile"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/default_image" />
-            </com.google.android.material.card.MaterialCardView>
-
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profileCard"
+            android:layout_marginTop="10dp">
             <ImageView
-                android:id="@+id/imgEditProfile"
-                android:layout_width="wrap_content"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="50dp"
-                android:src="@drawable/default_image" />
+                android:contentDescription="@string/imgicon"
+                android:src="@drawable/share_icon"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:contentDescription="@string/imgicon"
+                android:src="@drawable/setting_icon"/>
+        </LinearLayout>
 
-
-        </RelativeLayout>
 
         <TextView
             android:id="@+id/txtName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:textSize="22sp"
+            android:layout_below="@id/profileCard"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
             tools:text="Sok Sao" />
 
         <TextView
             android:id="@+id/txtEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/txtName"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
             android:text="@string/email_hint"
-            android:textSize="22sp" />
-    </LinearLayout>
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
-<!--    <LinearLayout-->
-<!--        android:id="@+id/lytLogIn"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:gravity="center"-->
-<!--        android:orientation="vertical">-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtEmail"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="1dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/msg_not_log_in" />-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
-<!--        <com.google.android.material.button.MaterialButton-->
-<!--            android:id="@+id/btnLogIn"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_margin="16dp"-->
-<!--            android:text="@string/log_in" />-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/number_follower"
+                    android:textColor="@color/white" />
 
-<!--    </LinearLayout>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/follower"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/number_following"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/following"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:ignore="UseCompoundDrawables"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_profile"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/edit_icon"
+                    android:layout_marginTop="-15dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
 
 </FrameLayout>
