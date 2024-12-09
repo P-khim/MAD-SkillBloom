@@ -29,15 +29,6 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Show initial HomeFragment
-//        showFragment(HomeFragment())
-
-        // Handle bottom navigation item selection
-//        binding.bottomNavigationView.setOnItemSelectedListener { item ->
-//            handleOnNavigationItemSelected(item)
-//        }
-
-        // Add all fragments to the Activity
         val fragmentTransaction = supportFragmentManager.beginTransaction()
 
         activeFragment = homeFragment
@@ -49,34 +40,10 @@ class HomeActivity : AppCompatActivity() {
 
         fragmentTransaction.commit()
 
-        // Handle bottom navigation view item click
-        /*binding.bottomNavigationView.setOnItemSelectedListener(object : NavigationBarView.OnItemSelectedListener {
-            override fun onNavigationItemSelected(item: MenuItem): Boolean {
-                return handleOnNavigationItemSelected(item)
-            }
-        })*/
-
-        /*binding.bottomNavigationView.setOnItemSelectedListener { item ->
-            handleOnNavigationItemSelected(item)
-        }*/
-
         binding.bottomNavigationView.setOnItemSelectedListener {
             handleOnNavigationItemSelected(it)
         }
-
-
     }
-
-//    fun showProfileFragment(profile: Profile) {
-//        Log.d("ruppite", "show profile")
-//        profileFragment.profile = profile
-//        val fragmentTransaction = supportFragmentManager.beginTransaction()
-//        fragmentTransaction.remove(moreFragment)
-//        fragmentTransaction.remove(loginFragment)
-//        fragmentTransaction.add(binding.lytFragment.id, profileFragment)
-//        fragmentTransaction.add(binding.lytFragment.id, moreFragment).hide(moreFragment)
-//        fragmentTransaction.commit()
-//    }
 
     private fun handleOnNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
@@ -86,28 +53,14 @@ class HomeActivity : AppCompatActivity() {
             R.id.mnuSave -> showFragment(saveFragment)
             else -> showFragment(profileFragment)
         }
-
         return true
     }
-
-
-
     private fun showFragment(fragment: Fragment) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.hide(activeFragment)
         fragmentTransaction.show(fragment)
         activeFragment = fragment
         fragmentTransaction.commit()
-
-        /*supportFragmentManager.beginTransaction().apply {
-            replace(binding.lytFragment.id, fragment)
-            commit()
-        }*/
-
-        /*with (supportFragmentManager.beginTransaction()) {
-            replace(binding.lytFragment.id, fragment)
-            commit()
-        }*/
     }
 
 }
