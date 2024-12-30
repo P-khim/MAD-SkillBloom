@@ -20,15 +20,42 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = file("C:/Users/ASUS ROG/OneDrive/Documents/SkillBloom.jks")
+            storePassword = "skill123456"
+            keyAlias = "SkillBloom"
+            keyPassword = "skill123456"
+        }
     }
 
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+    }
+
+    flavorDimensions += "SkillBloom"
+    productFlavors {
+        create("dev") {
+            dimension = "SkillBloom"
+            applicationId = "com.example.skillbloomapp.dev"
+            resValue("string", "app_name", "Skill Bloom Test")
+            buildConfigField("String", "apiBaseUrl", "\"http://10.0.2.2:8000/api/images/\"")
+        }
+        create("prd") {
+            dimension = "SkillBloom"
+            applicationId = "com.example.skillbloomapp"
+            resValue("string", "app_name", "Skill Bloom")
+            buildConfigField("String", "apiBaseUrl", "\"http://10.0.2.2:8000/api/\"")
         }
     }
 

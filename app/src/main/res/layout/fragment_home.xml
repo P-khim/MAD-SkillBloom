@@ -201,7 +201,7 @@
                 android:id="@+id/fragment_categories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:name="com.example.skillbloomapp.fragment.CategoriesFragment" />
+                android:name="com.example.skillbloomapp.ui.element.fragment.CategoriesFragment" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -220,7 +220,7 @@
                     android:id="@+id/fragment_recentjob"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:name="com.example.skillbloomapp.fragment.RecentjobFragment"
+                    android:name="com.example.skillbloomapp.ui.element.fragment.RecentjobFragment"
                     tools:ignore="FragmentTagUsage" />
 
             </LinearLayout>
