@@ -36,7 +36,7 @@
 
     <!-- Name Demo -->
     <string name="username">WanDare</string>
-
+    <string name="location">Phnom Penh, Cambodia</string>
     <string name="imgicon">Image or Icon</string>
     <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</string>
     <string name="welcome_login">Welcome Back</string>
