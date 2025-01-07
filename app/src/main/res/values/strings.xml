@@ -36,7 +36,7 @@
 
     <!-- Name Demo -->
     <string name="username">WanDare</string>
-
+    <string name="location">Phnom Penh, Cambodia</string>
     <string name="imgicon">Image or Icon</string>
     <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</string>
     <string name="welcome_login">Welcome Back</string>
@@ -44,7 +44,7 @@
     <string name="password_hint">Password</string>
     <string name="login">Login</string>
     <string name="signup">Sign Up</string>
-    <string name="switch_to_signup">Don\'t have an account?</string>
+    <string name="switch_to_signup">Don’t have an account?</string>
     <string name="switch_to_login">Already have an account?</string>
     <string name="remember">Remember me</string>
     <string name="forgot_password">Forgot password?</string>
@@ -56,10 +56,8 @@
     <string name="Profile">Profile</string>
     <string name="motto1">Find your perfect</string>
     <string name="motto2">Match Project with</string>
-    <string name="number_follower">120k</string>
-    <string name="follower">Follower</string>
-    <string name="number_following">23k</string>
-    <string name="following">Following</string>
-    <string name="edit_profile">Edit profile</string>
+    <string name="description">Google inc . California, USA</string>
+    <string name="question">What are the characteristics of a fake job call form?</string>
+    <string name="answer">Because I always find fake job calls so I’m confused which job to take. Can you share your knowledge here? Thank you.</string>
 
 </resources>

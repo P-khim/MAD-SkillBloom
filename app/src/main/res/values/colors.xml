@@ -15,6 +15,9 @@
     <color name="default_background">#3d3d3d</color>
     <color name="main_background">#130160</color>
     <color name="dark_blue">#0D0140</color>
+    <color name="ultra_dark_blue">#150B3D</color>
     <color name="light_blue">#03A9F4</color>
+    <color name="light_grey">#CBC9D4</color>
     <color name="orange">#FCA34D</color>
+    <color name="dark_orange">#FF9228</color>
 </resources>
