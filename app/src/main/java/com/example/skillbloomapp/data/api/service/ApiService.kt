@@ -13,7 +13,10 @@ interface ApiService {
     @GET("images")
     suspend fun loadEvent(): List<Categories>
 
-    @GET("users/{id}")
+//    @GET("users/{id}")
+//    suspend fun getProfileById(@Path("id") profileId: Int): Profile
+    @GET("api.php/{id}")
     suspend fun getProfileById(@Path("id") profileId: Int): Profile
+
 
 }
