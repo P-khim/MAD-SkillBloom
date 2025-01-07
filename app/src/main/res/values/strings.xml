@@ -60,4 +60,10 @@
     <string name="question">What are the characteristics of a fake job call form?</string>
     <string name="answer">Because I always find fake job calls so I’m confused which job to take. Can you share your knowledge here? Thank you.</string>
 
+    <string name="number_follower">120k</string>
+    <string name="follower">Follower</string>
+    <string name="number_following">23k</string>
+    <string name="following">Following</string>
+    <string name="edit_profile">Edit profile</string>
+
 </resources>
