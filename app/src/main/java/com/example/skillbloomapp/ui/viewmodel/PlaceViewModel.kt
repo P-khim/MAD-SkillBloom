@@ -24,8 +24,6 @@ class PlaceViewModel : ViewModel() {
         _placesState.postValue(ApiState(State.LOADING, null))
         viewModelScope.launch {
             try {
-                // Simulate delay (optional, remove in production)
-                delay(3000)
 
                 // Fetch places directly as a list
                 val places = apiService.getPlaces()

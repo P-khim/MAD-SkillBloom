@@ -7,7 +7,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ApiManager {
     private val retrofit: Retrofit by lazy {
         Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:8000/api/")
+//            .baseUrl("http://10.0.2.2:8000/api/")
+            .baseUrl("https://jsonplaceholder.typicode.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

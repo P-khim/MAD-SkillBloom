@@ -8,12 +8,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-
 import com.example.skillbloomapp.R
 import com.example.skillbloomapp.data.model.Place
 import com.squareup.picasso.Picasso
 
-class PlaceAdapter : ListAdapter<Place, PlaceAdapter.PlaceViewHolder>(PlaceDiffCallback()) {
+class PlaceAdapter : ListAdapter<Place, PlaceAdapter.PlaceViewHolder>(PlaceItemCallback()) {
 
     class PlaceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val imageView: ImageView = itemView.findViewById(R.id.placeImageView)
@@ -29,9 +28,7 @@ class PlaceAdapter : ListAdapter<Place, PlaceAdapter.PlaceViewHolder>(PlaceDiffC
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlaceViewHolder {
         val itemView = LayoutInflater.from(parent.context)
-
             .inflate(R.layout.place_item, parent, false)
-
         return PlaceViewHolder(itemView)
     }
 
@@ -39,13 +36,9 @@ class PlaceAdapter : ListAdapter<Place, PlaceAdapter.PlaceViewHolder>(PlaceDiffC
         val place = getItem(position)
         holder.bind(place)
     }
-
-    override fun getItemCount(): Int {
-        return currentList.size
-    }
 }
 
-class PlaceDiffCallback : DiffUtil.ItemCallback<Place>() {
+class PlaceItemCallback : DiffUtil.ItemCallback<Place>() {
     override fun areItemsTheSame(oldItem: Place, newItem: Place): Boolean {
         return oldItem.id == newItem.id
     }
