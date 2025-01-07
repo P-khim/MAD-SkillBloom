@@ -8,6 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white_500"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -144,9 +145,9 @@
                             app:cardCornerRadius="5dp">
 
                             <LinearLayout
-                                android:layout_width="80dp"
+                                android:layout_width="90dp"
                                 android:layout_height="25dp"
-                                android:background="@color/dark_blue"
+                                android:background="@color/dark_orange"
                                 android:gravity="center"
                                 android:orientation="horizontal">
 
@@ -170,12 +171,44 @@
             </LinearLayout>
         </RelativeLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="30sp"
-            android:text="@string/Profile"/>
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="About me"/>
+            <androidx.cardview.widget.CardView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardMaxElevation="30dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:paddingHorizontal="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_categories"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:paddingVertical="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:textStyle="normal"
+                        android:text="@string/aboutMe"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
     </LinearLayout>
 

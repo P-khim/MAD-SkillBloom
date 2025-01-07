@@ -21,6 +21,9 @@
     <!-- Error messages -->
     <string name="error_fragment_message">An error occurred</string>
     <string name="dismiss_error">Dismiss</string>
+    <string name="no_result">No results found</string>
+    <string name="no_result_des">The search could not be found, please check</string>
+    <string name="no_result_des2">spelling or write another word.</string>
 
     <!-- Splash txt -->
     <string name="splash_motto">Unlock Your</string>
@@ -35,6 +38,7 @@
     <string name="Save">Save</string>
 
     <!-- Name Demo -->
+    <string name="role">Software Engineer</string>
     <string name="username">WanDare</string>
     <string name="location">Phnom Penh, Cambodia</string>
     <string name="imgicon">Image or Icon</string>
@@ -59,5 +63,5 @@
     <string name="description">Google inc . California, USA</string>
     <string name="question">What are the characteristics of a fake job call form?</string>
     <string name="answer">Because I always find fake job calls so I’m confused which job to take. Can you share your knowledge here? Thank you.</string>
-
+    <string name="aboutMe">"As a Software Engineer, I design, develop, and maintain software systems that solve real-world problems and enhance user experiences. My role involves analyzing requirements, crafting efficient and scalable solutions, and writing clean, maintainable code. With a strong foundation in programming, I leverage modern tools and frameworks to build applications across various domains, ensuring they are reliable, secure, and user-friendly. Collaboration with cross-functional teams, debugging complex issues, and staying updated with the latest technological advancements are integral to my work. I take pride in transforming ideas into functional, high-quality software that meets the needs of users and businesses alike."</string>
 </resources>

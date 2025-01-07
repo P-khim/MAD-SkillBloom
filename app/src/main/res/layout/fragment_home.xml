@@ -83,7 +83,6 @@
                             android:layout_height="38dp"
                             android:src="@drawable/profileicon"
                             android:scaleType="centerCrop"/>
-
                     </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
@@ -192,6 +191,7 @@
 
                 <!-- Second TextView: Right-Aligned -->
                 <TextView
+                    android:id="@+id/view_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="view all" />
