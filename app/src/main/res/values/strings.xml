@@ -65,5 +65,9 @@
     <string name="number_following">23k</string>
     <string name="following">Following</string>
     <string name="edit_profile">Edit profile</string>
+    <string name="about_me">About me</string>
+    <string name="experience">Work experience</string>
+    <string name="skill">Skill</string>
+    <string name="language">Language</string>
 
 </resources>
