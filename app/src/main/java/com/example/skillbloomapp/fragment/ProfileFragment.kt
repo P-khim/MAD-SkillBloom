@@ -1,4 +1,5 @@
 package com.example.skillbloomapp.fragment
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,6 +23,7 @@ class ProfileFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -29,7 +31,8 @@ class ProfileFragment : Fragment() {
 
         viewModel.profileData.observe(viewLifecycleOwner) {profile ->
             binding.txtName.text = profile.name
-            binding.txtEmail.text = profile.email
+//            binding.txtEmail.text = profile.email
+            binding.txtEmail.text = "${profile.address.street},${profile.address.city}"
         }
     }
 }
