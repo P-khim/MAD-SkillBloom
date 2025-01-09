@@ -249,7 +249,27 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp">
+                android:layout_marginVertical="10dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UseCompoundDrawables">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/experience"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/edit_gold"
+                        android:contentDescription="@string/imgicon" />
+                </LinearLayout>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -304,11 +324,51 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp">
-                <TextView
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="10dp">
+                <GridLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/dummy_text"/>
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:rowCount="2"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/leadership"
+                        android:layout_margin="8dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/teamwork"
+                        android:layout_margin="8dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/visioner"
+                        android:layout_margin="8dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/target_oriented"
+                        android:layout_margin="8dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/consistent"
+                        android:layout_margin="8dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/five_more"
+                        android:layout_margin="8dp"
+                        />
+                </GridLayout>
             </LinearLayout>
 
         </LinearLayout>
@@ -359,11 +419,45 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp">
-                <TextView
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="10dp">
+                <GridLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/dummy_text"/>
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:rowCount="2"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/english"
+                        android:layout_margin="8dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/german"
+                        android:layout_margin="8dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/spanish"
+                        android:layout_margin="8dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mandarin"
+                        android:layout_margin="8dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/italy"
+                        android:layout_margin="8dp"
+                        />
+                </GridLayout>
             </LinearLayout>
 
         </LinearLayout>

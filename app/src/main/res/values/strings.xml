@@ -70,4 +70,17 @@
     <string name="skill">Skill</string>
     <string name="language">Language</string>
 
+    <string name="manager">Manager</string>
+    <string name="amazon">Amazon Inc</string>
+    <string name="leadership">Leadership</string>
+    <string name="teamwork">Teamwork</string>
+    <string name="visioner">Visioner</string>
+    <string name="target_oriented">Target oriented</string>
+    <string name="consistent">Consistent</string>
+    <string name="five_more">+5 more</string>
+    <string name="english">English</string>
+    <string name="german">German</string>
+    <string name="spanish">Spanish</string>
+    <string name="mandarin">Mandarin</string>
+    <string name="italy">Italy</string>
 </resources>
