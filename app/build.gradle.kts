@@ -25,17 +25,17 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("C:/Users/ASUS ROG/OneDrive/Documents/SkillBloom.jks")
-            storePassword = "skill123456"
+            storeFile = file("C:/Users/x/Downloads/Telegram Desktop/MAD II/SkillBloom.jks")
+            storePassword = "123456"
             keyAlias = "SkillBloom"
-            keyPassword = "skill123456"
+            keyPassword = "123456"
         }
     }
 
     buildTypes {
         release {
             signingConfig = signingConfigs.getByName("release")
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -91,6 +91,7 @@ dependencies {
     implementation ("com.google.android.material:material:1.9.0")
     implementation ("com.squareup.okhttp3:okhttp:4.9.0")
     implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3")
+    implementation("com.google.code.gson:gson:2.10.1")
 
 }
 
