@@ -1,8 +1,6 @@
 package com.example.skillbloomapp.global
 
-<<<<<<< HEAD
-class AppPref {
-=======
+
 import android.content.Context
 import android.content.SharedPreferences
 
@@ -39,5 +37,5 @@ class AppPref private constructor(){
         }
 
     }
->>>>>>> khim
+
 }
