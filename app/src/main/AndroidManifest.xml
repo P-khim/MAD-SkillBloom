@@ -42,6 +42,7 @@
         <!-- Declare SecondActivity -->
         <activity android:name=".ui.element.activity.SplashActivity" />
         <activity android:name=".ui.element.activity.MainActivity" />
+        <activity android:name=".ui.element.activity.LoginActivity"/>
 
 
 

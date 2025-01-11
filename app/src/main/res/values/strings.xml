@@ -69,6 +69,26 @@
     <string name="number_following">23k</string>
     <string name="following">Following</string>
     <string name="edit_profile">Edit profile</string>
+    <string name="about_me">About me</string>
+    <string name="experience">Work experience</string>
+    <string name="skill">Skill</string>
+    <string name="language">Language</string>
 
+<<<<<<< HEAD
     <string name="aboutMe">"As a Software Engineer, I design, develop, and maintain software systems that solve real-world problems and enhance user experiences. My role involves analyzing requirements, crafting efficient and scalable solutions, and writing clean, maintainable code. With a strong foundation in programming, I leverage modern tools and frameworks to build applications across various domains, ensuring they are reliable, secure, and user-friendly. Collaboration with cross-functional teams, debugging complex issues, and staying updated with the latest technological advancements are integral to my work. I take pride in transforming ideas into functional, high-quality software that meets the needs of users and businesses alike."</string>
+=======
+    <string name="manager">Manager</string>
+    <string name="amazon">Amazon Inc</string>
+    <string name="leadership">Leadership</string>
+    <string name="teamwork">Teamwork</string>
+    <string name="visioner">Visioner</string>
+    <string name="target_oriented">Target oriented</string>
+    <string name="consistent">Consistent</string>
+    <string name="five_more">+5 more</string>
+    <string name="english">English</string>
+    <string name="german">German</string>
+    <string name="spanish">Spanish</string>
+    <string name="mandarin">Mandarin</string>
+    <string name="italy">Italy</string>
+>>>>>>> khim
 </resources>

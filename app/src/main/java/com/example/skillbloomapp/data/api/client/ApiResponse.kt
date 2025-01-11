@@ -10,4 +10,5 @@ data class ApiResponse<T>(
         return status == "success"
     }
 
+
 }
