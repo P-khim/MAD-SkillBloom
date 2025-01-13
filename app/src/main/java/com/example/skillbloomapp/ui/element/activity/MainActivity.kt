@@ -1,11 +1,13 @@
 package com.example.skillbloomapp.ui.element.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.skillbloomapp.R
 import com.example.skillbloomapp.databinding.ActivityHomeBinding
+import com.example.skillbloomapp.global.AppPref
 import com.example.skillbloomapp.ui.element.fragment.CommunityFragment
 import com.example.skillbloomapp.ui.element.fragment.HomeFragment
 import com.example.skillbloomapp.ui.element.fragment.PostFragment
@@ -23,7 +25,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var activeFragment: Fragment
 
-    private var isLoggedIn = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setOnItemSelectedListener {
             handleOnNavigationItemSelected(it)
         }
+
     }
 
     private fun handleOnNavigationItemSelected(item: MenuItem): Boolean {
@@ -52,6 +54,7 @@ class MainActivity : AppCompatActivity() {
             R.id.mnuPost -> showFragment(postFragment)
             R.id.mnuSave -> showFragment(saveFragment)
             else -> showFragment(profileFragment)
+
         }
         return true
     }
