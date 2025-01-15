@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.skillbloomapp.R
 import com.example.skillbloomapp.databinding.FragmentSaveBinding
 
 class SaveFragment : Fragment() {
@@ -20,6 +22,14 @@ class SaveFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Navigation setup for view_all button
+        binding.findAJob.setOnClickListener {
+            findNavController().navigate(R.id.action_saveFragment_to_searchFragment)
+        }
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

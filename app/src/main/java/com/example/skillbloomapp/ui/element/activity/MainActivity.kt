@@ -1,21 +1,21 @@
 package com.example.skillbloomapp.ui.element.activity
 
+import PostFragment
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.skillbloomapp.R
-import com.example.skillbloomapp.databinding.ActivityHomeBinding
+import com.example.skillbloomapp.databinding.ActivityMainBinding
 import com.example.skillbloomapp.global.AppPref
 import com.example.skillbloomapp.ui.element.fragment.CommunityFragment
 import com.example.skillbloomapp.ui.element.fragment.HomeFragment
-import com.example.skillbloomapp.ui.element.fragment.PostFragment
 import com.example.skillbloomapp.ui.element.fragment.ProfileFragment
 import com.example.skillbloomapp.ui.element.fragment.SaveFragment
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityHomeBinding
+    private lateinit var binding: ActivityMainBinding
 
     private val homeFragment = HomeFragment()
     private val communityFragment = CommunityFragment()
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHomeBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val fragmentTransaction = supportFragmentManager.beginTransaction()

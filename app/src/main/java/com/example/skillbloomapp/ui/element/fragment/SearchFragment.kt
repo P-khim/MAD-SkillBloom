@@ -13,12 +13,25 @@ class SearchFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSearchBinding.inflate(inflater, container, false)
-        return binding.root
+        val view = binding.root
+
+        // Handle arguments if passed
+//        val argumentValue = arguments?.getString("key")
+//        if (argumentValue != null) {
+//            // Use the argument as needed, e.g., update a TextView or perform some action
+//            binding.textViewSearch.text = argumentValue
+//        }
+
+        // Handle return back functionality
+        binding.returnBack.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
+
+        return view
     }
 
     override fun onDestroyView() {

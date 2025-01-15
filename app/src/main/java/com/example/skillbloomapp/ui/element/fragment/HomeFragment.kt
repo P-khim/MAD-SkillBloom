@@ -4,13 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.example.skillbloomapp.R
 import com.example.skillbloomapp.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
+    private lateinit var viewAll: TextView
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
@@ -20,16 +21,29 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        return binding.root
+        val view = binding.root
+
+        viewAll = view.findViewById(R.id.view_all)
+
+        viewAll.setOnClickListener {
+            navigateToSearchFragment()
+        }
+        return view
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    private fun navigateToSearchFragment() {
+        val searchFragment = SearchFragment() // Create an instance of the target fragment
 
-        // Navigation setup for view_all button
-        binding.viewAll.setOnClickListener {
-            findNavController().navigate(R.id.searchFragment)
-        }
+        // Optional: Pass data to SearchFragment
+        val bundle = Bundle()
+        bundle.putString("key", "value") // Replace "key" and "value" with actual data
+        searchFragment.arguments = bundle
+
+        // Replace the current fragment with SearchFragment
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.lytFragment, searchFragment) // Replace with the correct container ID
+            .addToBackStack(null) // Allows navigating back to HomeFragment
+            .commit()
     }
 
     override fun onDestroyView() {
