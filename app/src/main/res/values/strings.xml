@@ -95,4 +95,5 @@
         <item>Category 3</item>
     </string-array>
 
+    <string name="moneyPerHour">$35/hr</string>
 </resources>
