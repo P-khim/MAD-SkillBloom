@@ -17,7 +17,9 @@ interface ApiService {
     @GET("images")
     suspend fun getPlaces(): List<Place>
 
-    @GET("freelancer")
+//    @GET("freelancer")
+//    suspend fun getFreelancer(): List<Freelancer>
+    @GET("users-profile")
     suspend fun getFreelancer(): List<Freelancer>
     @GET("images")
     suspend fun loadEvent(): List<Categories>

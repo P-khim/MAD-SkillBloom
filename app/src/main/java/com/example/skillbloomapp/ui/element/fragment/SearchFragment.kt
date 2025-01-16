@@ -1,16 +1,23 @@
 package com.example.skillbloomapp.ui.element.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.GridLayoutManager
+import com.example.skillbloomapp.data.api.client.State
 import com.example.skillbloomapp.databinding.FragmentSearchBinding
+import com.example.skillbloomapp.ui.element.adapter.FreelancerAdapter
+import com.example.skillbloomapp.ui.viewmodel.FreelancerViewModel
 
 class SearchFragment : Fragment() {
 
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
+    private val viewModel: FreelancerViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -19,14 +26,6 @@ class SearchFragment : Fragment() {
         _binding = FragmentSearchBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        // Handle arguments if passed
-//        val argumentValue = arguments?.getString("key")
-//        if (argumentValue != null) {
-//            // Use the argument as needed, e.g., update a TextView or perform some action
-//            binding.textViewSearch.text = argumentValue
-//        }
-
-        // Handle return back functionality
         binding.returnBack.setOnClickListener {
             parentFragmentManager.popBackStack()
         }
@@ -34,8 +33,44 @@ class SearchFragment : Fragment() {
         return view
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    @SuppressLint("SuspiciousIndentation")
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Set up the RecyclerView with a GridLayoutManager
+        val adapter = FreelancerAdapter()
+        val gridLayoutManager = GridLayoutManager(context, 2) // 2 columns
+        binding.freelancerRecyclerView.layoutManager = gridLayoutManager
+        binding.freelancerRecyclerView.adapter = adapter
+
+        viewModel.fetchFreelancers()
+
+        viewModel.freelancersState.observe(viewLifecycleOwner) { state ->
+            when (state.state) {
+                State.LOADING -> {
+                    binding.progressBar.visibility = View.VISIBLE
+                    binding.freelancerRecyclerView.visibility = View.GONE
+                    binding.errorTextView.visibility = View.GONE
+                }
+
+                State.SUCCESS -> {
+                    binding.progressBar.visibility = View.GONE
+                    binding.freelancerRecyclerView.visibility = View.VISIBLE
+                    binding.errorTextView.visibility = View.GONE
+                    state.data?.let { adapter.submitList(it) }
+                }
+
+                State.ERROR -> {
+                    binding.progressBar.visibility = View.GONE
+                    binding.freelancerRecyclerView.visibility = View.GONE
+                    binding.errorTextView.visibility = View.VISIBLE
+                }
+            }
+        }
     }
-}
+
+        override fun onDestroyView() {
+            super.onDestroyView()
+            _binding = null
+        }
+    }
