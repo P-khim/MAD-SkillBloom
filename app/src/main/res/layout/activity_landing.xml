@@ -6,10 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/main_background">
 
-<!--    <androidx.fragment.app.FragmentContainerView-->
-<!--        android:id="@+id/lytFragment"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content" />-->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,21 +29,17 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:paddingRight="30sp">
+        android:layout_gravity="center">
 
-        <ImageView
-            android:id="@+id/onToNext"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:src="@drawable/baseline_arrow_forward_24"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:indeterminateTint="@color/dark_orange"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </LinearLayout>
-
-
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        app:labelVisibilityMode="labeled"-->
-<!--        android:id="@+id/bottomNavigationView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"/>-->
-
 </LinearLayout>

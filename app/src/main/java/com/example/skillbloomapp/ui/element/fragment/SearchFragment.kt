@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.skillbloomapp.R
 import com.example.skillbloomapp.data.api.client.State
 import com.example.skillbloomapp.databinding.FragmentSearchBinding
 import com.example.skillbloomapp.ui.element.adapter.FreelancerAdapter
@@ -37,9 +38,13 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Set up the RecyclerView with a GridLayoutManager
+        // Hide BottomNavigationView
+        val bottomNav = requireActivity().findViewById<View>(R.id.bottomNavigationView)
+        bottomNav.visibility = View.GONE
+
+        // Set up your UI here
         val adapter = FreelancerAdapter()
-        val gridLayoutManager = GridLayoutManager(context, 2) // 2 columns
+        val gridLayoutManager = GridLayoutManager(context, 2)
         binding.freelancerRecyclerView.layoutManager = gridLayoutManager
         binding.freelancerRecyclerView.adapter = adapter
 
@@ -52,14 +57,12 @@ class SearchFragment : Fragment() {
                     binding.freelancerRecyclerView.visibility = View.GONE
                     binding.errorTextView.visibility = View.GONE
                 }
-
                 State.SUCCESS -> {
                     binding.progressBar.visibility = View.GONE
                     binding.freelancerRecyclerView.visibility = View.VISIBLE
                     binding.errorTextView.visibility = View.GONE
                     state.data?.let { adapter.submitList(it) }
                 }
-
                 State.ERROR -> {
                     binding.progressBar.visibility = View.GONE
                     binding.freelancerRecyclerView.visibility = View.GONE
@@ -71,6 +74,11 @@ class SearchFragment : Fragment() {
 
         override fun onDestroyView() {
             super.onDestroyView()
+
+            // Show BottomNavigationView again
+            val bottomNav = requireActivity().findViewById<View>(R.id.bottomNavigationView)
+            bottomNav.visibility = View.VISIBLE
+
             _binding = null
         }
     }
