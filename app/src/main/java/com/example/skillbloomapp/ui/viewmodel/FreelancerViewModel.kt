@@ -26,7 +26,7 @@ class FreelancerViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 // Simulate delay (optional, remove in production)
-                delay(3000)
+                delay(500)
 
                 // Fetch freelancers directly as a list
                 val freelancers = apiService.getFreelancer()

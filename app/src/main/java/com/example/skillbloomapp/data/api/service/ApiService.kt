@@ -17,20 +17,14 @@ interface ApiService {
     @GET("images")
     suspend fun getPlaces(): List<Place>
 
-//    @GET("freelancer")
-//    suspend fun getFreelancer(): List<Freelancer>
     @GET("users-profile")
     suspend fun getFreelancer(): List<Freelancer>
-    @GET("images")
-    suspend fun loadEvent(): List<Categories>
 
     @GET("users/{id}")
     suspend fun getProfileById(@Path("id") profileId: Int): Profile
-//    @GET("api.php/{id}")
-//    suspend fun getProfileById(@Path("id") profileId: Int): Profile
 
     @FormUrlEncoded
-    @POST("login.php")
+    @POST("login")
     suspend fun login(@Field("username") username: String, @Field("password") password: String) : ApiResponse<Login>
 
 }
