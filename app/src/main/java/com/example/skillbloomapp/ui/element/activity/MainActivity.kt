@@ -1,16 +1,15 @@
 package com.example.skillbloomapp.ui.element.activity
 
 import PostFragment
-import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.skillbloomapp.R
 import com.example.skillbloomapp.databinding.ActivityMainBinding
-import com.example.skillbloomapp.global.AppPref
 import com.example.skillbloomapp.ui.element.fragment.CommunityFragment
 import com.example.skillbloomapp.ui.element.fragment.HomeFragment
+import com.example.skillbloomapp.ui.element.dialog.PostBottomSheet
 import com.example.skillbloomapp.ui.element.fragment.ProfileFragment
 import com.example.skillbloomapp.ui.element.fragment.SaveFragment
 
@@ -51,13 +50,16 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.mnuHome -> showFragment(homeFragment)
             R.id.mnuCommunity -> showFragment(communityFragment)
-            R.id.mnuPost -> showFragment(postFragment)
+            R.id.mnuPost -> {
+                val postBottomSheet = PostBottomSheet()
+                postBottomSheet.show(supportFragmentManager, postBottomSheet.tag)
+            }
             R.id.mnuSave -> showFragment(saveFragment)
             else -> showFragment(profileFragment)
-
         }
         return true
     }
+
     private fun showFragment(fragment: Fragment) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.hide(activeFragment)
