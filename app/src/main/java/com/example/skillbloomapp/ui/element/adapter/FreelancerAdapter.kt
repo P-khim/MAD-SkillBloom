@@ -24,11 +24,10 @@ class FreelancerAdapter : ListAdapter<Freelancer, FreelancerAdapter.FreelancerVi
 
         fun bind(freelancer: Freelancer) {
             roleTextView.text = freelancer.role
-            jobCountTextView.text = "Jobs: ${freelancer.jobCount}"
+            jobCountTextView.text = "(${freelancer.jobCount} Jobs)"
             moneyPerHourTextView.text = "$${freelancer.moneyPerHour}/hr"
             Picasso.get()
                 .load(freelancer.imageUrl)
-//                .placeholder(R.drawable.placeholder)
                 .into(imageView)
         }
     }

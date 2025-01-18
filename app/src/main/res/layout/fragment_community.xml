@@ -13,12 +13,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
+        <TextView
+            android:layout_gravity="end"
             android:layout_margin="10dp"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:scaleX="-1"
-            android:src="@drawable/baseline_arrow_right_alt_24"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/community"
+            android:textColor="@color/orange"/>
 
         <androidx.cardview.widget.CardView
             android:layout_margin="10dp"
@@ -231,7 +233,7 @@
                             android:layout_height="wrap_content"
                             android:scaleType="centerCrop"
                             android:background="@color/light_grey"
-                            android:src="@drawable/profileicon" />
+                            android:src="@drawable/profile_demo3" />
                     </androidx.cardview.widget.CardView>
 
                     <LinearLayout
@@ -279,11 +281,11 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
                         android:textStyle="bold"
-                        android:text="@string/question"/>
+                        android:text="Starting Freelance Work"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer"/>
+                        android:text="I’m new to freelancing and just finished my first project. It feels so empowering to work on my terms! Any advice for building a strong portfolio?"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -367,7 +369,7 @@
                             android:layout_height="wrap_content"
                             android:scaleType="centerCrop"
                             android:background="@color/light_grey"
-                            android:src="@drawable/profile_demo" />
+                            android:src="@drawable/profile_demo4" />
                     </androidx.cardview.widget.CardView>
 
                     <LinearLayout
@@ -381,7 +383,7 @@
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
                             android:textColor="@color/black"
-                            android:text="Arnold Leonardo" />
+                            android:text="Jessica" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -415,11 +417,11 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
                         android:textStyle="bold"
-                        android:text="@string/question"/>
+                        android:text="Challenges of Freelancing"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/answer"/>
+                        android:text="Freelancing isn’t as easy as it looks. Between chasing clients for payments and managing deadlines, it’s a constant hustle. Still, the freedom makes it worth it."/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -438,7 +440,7 @@
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="12"/>
+                        android:text="47"/>
                     <ImageView
                         android:padding="15dp"
                         android:layout_width="wrap_content"
@@ -448,7 +450,7 @@
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="10"/>
+                        android:text="20"/>
                     <View
                         android:layout_width="0dp"
                         android:layout_height="0dp"
@@ -463,7 +465,7 @@
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2"/>
+                        android:text="8"/>
 
                 </LinearLayout>
             </LinearLayout>

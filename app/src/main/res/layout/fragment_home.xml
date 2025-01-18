@@ -81,7 +81,7 @@
                         <ImageView
                             android:layout_width="38dp"
                             android:layout_height="38dp"
-                            android:src="@drawable/profileicon"
+                            android:src="@drawable/profile_demo3"
                             android:scaleType="centerCrop"/>
                     </androidx.cardview.widget.CardView>
 

@@ -20,18 +20,13 @@ class PlaceViewModel : ViewModel() {
     fun fetchPlaces() {
         val apiService = ApiManager.apiService
 
-        // Set loading state
         _placesState.postValue(ApiState(State.LOADING, null))
         viewModelScope.launch {
             try {
-                // Simulate delay (optional, remove in production)
                 delay(3000)
-
-                // Fetch places directly as a list
                 val places = apiService.getPlaces()
                 _placesState.postValue(ApiState(State.SUCCESS, places))
             } catch (ex: Exception) {
-                // Handle exceptions
                 Log.e("com.example.skillbloomapp.ui.viewmodel.PlaceViewModel", "[Fetch Places] Error: $ex")
                 _placesState.postValue(ApiState(State.ERROR, null))
             }

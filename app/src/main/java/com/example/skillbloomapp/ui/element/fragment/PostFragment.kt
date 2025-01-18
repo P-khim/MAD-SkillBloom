@@ -24,7 +24,6 @@ class PostFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Show the BottomSheetDialogFragment when btnShowBottomSheet is clicked
         binding.btnShowBottomSheet.setOnClickListener {
             val bottomSheetPost = PostBottomSheet()
             bottomSheetPost.show(parentFragmentManager, bottomSheetPost.tag)

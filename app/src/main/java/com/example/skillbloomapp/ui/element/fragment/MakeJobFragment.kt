@@ -29,7 +29,6 @@ class MakeJobFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Hide BottomNavigationView
         val bottomNav = requireActivity().findViewById<View>(R.id.bottomNavigationView)
         bottomNav.visibility = View.GONE
     }
