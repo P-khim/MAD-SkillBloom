@@ -1,6 +1,5 @@
 package com.example.skillbloomapp.ui.element.activity
 
-import PostFragment
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +9,7 @@ import com.example.skillbloomapp.databinding.ActivityMainBinding
 import com.example.skillbloomapp.ui.element.fragment.CommunityFragment
 import com.example.skillbloomapp.ui.element.fragment.HomeFragment
 import com.example.skillbloomapp.ui.element.dialog.PostBottomSheet
+import com.example.skillbloomapp.ui.element.fragment.PostFragment
 import com.example.skillbloomapp.ui.element.fragment.ProfileFragment
 import com.example.skillbloomapp.ui.element.fragment.SaveFragment
 

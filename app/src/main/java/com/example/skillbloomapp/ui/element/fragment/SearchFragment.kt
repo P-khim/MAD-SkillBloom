@@ -75,7 +75,6 @@ class SearchFragment : Fragment() {
         override fun onDestroyView() {
             super.onDestroyView()
 
-            // Show BottomNavigationView again
             val bottomNav = requireActivity().findViewById<View>(R.id.bottomNavigationView)
             bottomNav.visibility = View.VISIBLE
 

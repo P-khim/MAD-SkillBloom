@@ -32,17 +32,17 @@ class HomeFragment : Fragment() {
     }
 
     private fun navigateToSearchFragment() {
-        val searchFragment = SearchFragment() // Create an instance of the target fragment
+        val searchFragment = SearchFragment()
 
         // Optional: Pass data to SearchFragment
         val bundle = Bundle()
-        bundle.putString("key", "value") // Replace "key" and "value" with actual data
+        bundle.putString("key", "value")
         searchFragment.arguments = bundle
 
         // Replace the current fragment with SearchFragment
         parentFragmentManager.beginTransaction()
             .replace(R.id.lytFragment, searchFragment) // Replace with the correct container ID
-            .addToBackStack(null) // Allows navigating back to HomeFragment
+            .addToBackStack(null)
             .commit()
     }
 
