@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import com.example.skillbloomapp.R
+import com.example.skillbloomapp.ui.element.fragment.MakeJobFragment
 import com.example.skillbloomapp.ui.element.fragment.PostPageFragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
@@ -25,6 +26,11 @@ class PostBottomSheet : BottomSheetDialogFragment() {
         btnPost.setOnClickListener {
             navigateToPostPageFragment()
         }
+
+        val btnMakeAJob: Button = view.findViewById(R.id.btnMakeAJob)
+        btnMakeAJob.setOnClickListener {
+            navigateToMakeJobFragment()
+        }
     }
 
     private fun navigateToPostPageFragment() {
@@ -32,6 +38,14 @@ class PostBottomSheet : BottomSheetDialogFragment() {
 
         parentFragmentManager.beginTransaction()
             .replace(R.id.lytFragment, PostPageFragment())
+            .addToBackStack(null)
+            .commit()
+    }
+    private fun navigateToMakeJobFragment() {
+        dismiss()
+
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.lytFragment, MakeJobFragment())
             .addToBackStack(null)
             .commit()
     }
