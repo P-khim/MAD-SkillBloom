@@ -37,8 +37,12 @@
     <string name="Post">Post</string>
     <string name="Save">Save</string>
 
-    <!-- Name Demo -->
+    <!-- Roles Demo -->
     <string name="role">Software Engineer</string>
+    <string name="role1">UI/UX Designer</string>
+    <string name="role2">Product Manager</string>
+    <string name="role3">DevOps Engineer</string>
+    <!-- Names Demo -->
     <string name="username">Wan Dare</string>
     <string name="location">Phnom Penh, Cambodia</string>
     <string name="imgicon">Image or Icon</string>

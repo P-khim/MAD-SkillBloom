@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true"
-    android:padding="10dp"
+    android:paddingHorizontal="10dp"
     tools:ignore="ScrollViewCount">
 
     <LinearLayout
@@ -247,7 +247,7 @@
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
                             android:textColor="@color/black"
-                            android:text="Monica" />
+                            android:text="@string/username" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
