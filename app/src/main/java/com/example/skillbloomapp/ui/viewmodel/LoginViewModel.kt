@@ -15,26 +15,22 @@ class LoginViewModel: ViewModel() {
     private val _logInData = MutableLiveData<ApiState<Login>>()
     val loginData: LiveData<ApiState<Login>> get() = _logInData
 
-    fun login(username: String, password: String){
+    fun login(email: String, password: String) {
         _logInData.postValue(ApiState.loading())
 
         viewModelScope.launch {
-            try{
-                 val response = ApiManager.apiService.login(username, password)
-                 if(response.isSuccess()){
-
-                     _logInData.postValue(ApiState.success(response.data))
-                 } else {
-
-                     _logInData.postValue(ApiState.error(response.message ?: "Login Failed"))
-                 }
-
-            } catch (ex: Exception) {
-
-                _logInData.postValue(ApiState.error("An error occured: ${ex.message}"))
+            try {
+                val response = ApiManager.apiService.login(email, password)
+                if (response.isSuccess()) {
+                    _logInData.postValue(ApiState.success(response.data))
+                } else {
+                    _logInData.postValue(ApiState.error("Incorrect email or password. Please try again."))
+                }
+            }
+            catch (ex: Exception) {
+                _logInData.postValue(ApiState.error("Incorrect email or password. Please try again."))
             }
         }
-
-
     }
+
 }
