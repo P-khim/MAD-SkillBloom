@@ -25,7 +25,7 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("C:/Users/x/Downloads/Telegram Desktop/MAD II/SkillBloom.jks")
+            storeFile = file("C:/Users/ASUS ROG/OneDrive/Documents/SkillBloom.jks")
             storePassword = "123456"
             keyAlias = "SkillBloom"
             keyPassword = "123456"
@@ -59,7 +59,6 @@ android {
         }
     }
 
-    // Ensure Java 1.8 compatibility
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
