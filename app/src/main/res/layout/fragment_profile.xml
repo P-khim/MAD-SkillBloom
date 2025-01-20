@@ -11,6 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/login"
+        android:background="@color/main_background"
+        android:textColor="@color/white"
         android:id="@+id/logginButton"
         android:visibility="gone"
         android:layout_gravity="center"
