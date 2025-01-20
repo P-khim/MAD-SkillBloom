@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
+        android:textColor="@color/dark_blue"
         android:text="@string/welcome_login"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -22,7 +23,7 @@
         android:layout_below="@id/textViewWelcome"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
-        android:text="@string/dummy_text"
+        android:text="@string/welcome_message"
         android:textAlignment="center" />
 
     <EditText
@@ -67,7 +68,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="@string/remember" />
+            android:text="@string/remember"
+            android:buttonTint="@color/light_blue"/>
 
         <TextView
             android:id="@+id/textViewForgotPassword"
@@ -83,6 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/rmbnfg"
         android:layout_marginTop="24dp"
+        android:background="@color/main_background"
         android:text="@string/login"
         android:textColor="@android:color/white" />
 
@@ -103,6 +106,7 @@
         android:id="@+id/textViewSignUpLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/dark_orange"
         android:text="@string/signup"
         android:layout_marginStart="4dp"/>
 
